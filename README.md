@@ -1,21 +1,34 @@
-# DingDing Notify Action [![Test](https://github.com/zcong1993/actions-ding/actions/workflows/test.yml/badge.svg)](https://github.com/zcong1993/actions-ding/actions/workflows/test.yml)
+# DingTalk Bot Message [![Test](https://github.com/Orchardxyz/dingtalk-bot-message/actions/workflows/test.yml/badge.svg)](https://github.com/Orchardxyz/dingtalk-bot-message/actions/workflows/test.yml)
 
-Send dingding simple notify message.
+This repository is a fork of [`zcong1993/actions-ding`](https://github.com/zcong1993/actions-ding), which appears to have been unmaintained for more than 4 years.
+
+Upgrades in this fork:
+
+- GitHub Action runtime updated from `node16` to `node24`
+- `@actions/core` upgraded from `1.x` to `3.x`
+- TypeScript upgraded from `4.x` to `5.x`
+- TypeScript compiler target updated to `es2022`
+- TypeScript module output updated to `esnext`
+- TypeScript module resolution updated to `bundler`
+- `@types/node` upgraded from `16` to `24`
+- `@vercel/ncc` upgraded from `0.31` to `0.38`
+
+Send DingTalk bot messages from GitHub Actions.
 
 ## Usage
 
 | option      | required | description                                                                                                         |
 | ----------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| dingToken   | true     | DingDing bot access_token                                                                                           |
-| body        | true     | any kind of message body [dingding](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) support into `body` field |
+| dingToken   | true     | DingTalk bot access token                                                                                           |
+| body        | true     | any kind of message body [DingTalk](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) supports in the `body` field |
 | secret      | false    | if secret set, action will call API with sign                                                                       |
 | ignoreError | false    | if set true, will not fail action when API call failed                                                              |
 
 ## Examples
 
 ```yaml
-- name: Send dingding notify
-  uses: zcong1993/actions-ding@master
+- name: Send DingTalk bot message
+  uses: Orchardxyz/dingtalk-bot-message@v1
   with:
     dingToken: ${{ secrets.DING_TOKEN }}
     body: |
@@ -33,8 +46,8 @@ Send dingding simple notify message.
 ### with sign
 
 ```yaml
-- name: Send dingding notify
-  uses: zcong1993/actions-ding@master
+- name: Send DingTalk bot message
+  uses: Orchardxyz/dingtalk-bot-message@v1
   with:
     dingToken: ${{ secrets.DING_TOKEN }}
     secret: ${{ secrets.DING_SECRET }} # if secret set, action will call API with sign
@@ -50,4 +63,4 @@ Send dingding simple notify message.
       }
 ```
 
-put any kind of message body [dingding](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) support into `body` field.
+Put any kind of message body that [DingTalk](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) supports into the `body` field.

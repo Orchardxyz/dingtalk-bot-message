@@ -1,16 +1,14 @@
 name: Test
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   # test action works running from the graph
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Send dingding notify
+    - uses: actions/checkout@v4
+    - name: Send DingTalk bot message
       uses: ./
       with:
         dingToken: ${{ secrets.DING_TOKEN }}

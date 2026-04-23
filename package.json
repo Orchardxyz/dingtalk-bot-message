@@ -1,8 +1,8 @@
 {
-  "name": "actions-ding",
+  "name": "dingtalk-bot-message",
   "version": "0.0.0",
   "private": true,
-  "description": "Send dingding simple notify message",
+  "description": "Send DingTalk bot messages from GitHub Actions",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write **/*.ts",
@@ -14,29 +14,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zcong1993/actions-ding"
+    "url": "git+https://github.com/Orchardxyz/dingtalk-bot-message.git"
+  },
+  "engines": {
+    "node": ">=24"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "zcong1993",
+  "author": "Orchardxyz",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^3.0.1",
     "@zcong/ding-bot": "^0.1.3"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.7",
+    "@types/node": "^24.0.0",
     "@typescript-eslint/parser": "^5.3.1",
-    "@vercel/ncc": "^0.31.1",
+    "@vercel/ncc": "^0.38.4",
     "eslint": "^8.2.0",
     "eslint-plugin-github": "^4.3.4",
     "eslint-plugin-jest": "^25.2.4",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^5.6.3"
   }
 }

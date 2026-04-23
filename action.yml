@@ -1,12 +1,12 @@
-name: 'DingDing Notify Action'
-description: 'Send dingding simple notify message'
-author: 'zcong1993'
+name: 'DingTalk Bot Message'
+description: 'Send DingTalk bot messages from GitHub Actions'
+author: 'Orchardxyz'
 branding:
   icon: 'message-square'
   color: 'blue'
 inputs:
   dingToken:
-    description: 'DingDing bot token'
+    description: 'DingTalk bot token'
     required: true
   body:
     description: 'Post Body to send'
@@ -19,5 +19,5 @@ inputs:
     required: false
 
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'dist/index.js'
