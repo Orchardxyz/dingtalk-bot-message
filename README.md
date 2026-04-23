@@ -1,4 +1,4 @@
-# DingTalk Bot Message [![Test](https://github.com/Orchardxyz/dingtalk-bot-message/actions/workflows/test.yml/badge.svg)](https://github.com/Orchardxyz/dingtalk-bot-message/actions/workflows/test.yml)
+# DingTalk Bot Message
 
 This repository is a fork of [`zcong1993/actions-ding`](https://github.com/zcong1993/actions-ding), which appears to have been unmaintained for more than 4 years.
 
